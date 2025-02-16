@@ -1,0 +1,42 @@
+### call toInteger
+GET http://localhost:4004/api/v1/toInteger(value='20')
+
+### call toNumber
+GET http://localhost:4004/api/v1/toNumber(value='20.2')
+
+### call toString
+GET http://localhost:4004/api/v1/toStr(value=20.2)
+
+### call addQoutes
+GET http://localhost:4004/api/v1/addQuotes(value='abcd')
+
+### call getListOfTodods
+GET http://localhost:4004/api/v1/getListOfTodos()
+
+### call listToString
+POST http://localhost:4004/api/v1/listToString
+Content-Type: application/json
+
+{
+    "field" : "id",
+    "responseArray": [
+        {
+            "id": 1,
+            "title": "learn CAPM with Anubhav Trainings",
+            "userId": 1,
+            "completed": false
+        },
+        {
+            "id": 2,
+            "title": "learn Analytics cloud with Anubhav Trainings",
+            "userId": 1,
+            "completed": true
+        },
+        {
+            "id": 3,
+            "title": "learn Build BPA with Anubhav Trainings",
+            "userId": 1,
+            "completed": true
+        }
+    ]
+}     

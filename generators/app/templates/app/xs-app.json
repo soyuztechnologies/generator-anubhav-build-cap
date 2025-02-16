@@ -1,0 +1,26 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "/sap/bc/ina",
+      "destination": "srv",
+      "httpMethods": ["POST", "GET"],
+<% if(authorization){ -%>
+      "scope": "$XSAPPNAME.Viewer",
+<% } -%>
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "/sap/bc/ina",
+      "destination": "srv",
+      "httpMethods": ["OPTIONS"],
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/(.*)",
+      "localDir": "resources",
+      "authenticationType": "none"
+    }
+  ]
+}
