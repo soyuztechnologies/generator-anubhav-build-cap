@@ -1,7 +1,7 @@
 {
-  "name": "generator-anubhav-sac",
+  "name": "generator-anubhav-build-cap",
   "version": "1.6.0",
-  "description": "Anubhav Trainings - Anubhav SAC HANA Adapter",
+  "description": "Anubhav Trainings - Build BPA CAP App",
   "homepage": "https://www.youtube.com/channel/UCzEPlO_nyhiE1MkZiufl9iw",
   "author": {
     "name": "Anubhav Oberoy",
@@ -16,8 +16,8 @@
   "keywords": [
     "mta",
     "multitarget",
-    "hana",
-    "hana-analytics-adapter",
+    "sap build bpa",
+    "sap core AI",
     "anubhav",
     "anubhav oberoy",
     "yeoman-generator"
@@ -80,5 +80,5 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "anubhavtrainings"
+  "repository": "generator-anubhav-build-cap"
 }
