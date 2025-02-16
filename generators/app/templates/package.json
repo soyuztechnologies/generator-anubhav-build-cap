@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "cds watch",
-    "deploy": "npm install && mbt build && cd mta_archieve && cf deploy <%= projectName %>_1.0.0.mtar"
+    "deploy": "npm install && mbt build && cd mta_archives && cf deploy <%= projectName %>_1.0.0.mtar"
   },
   "cds": {
     "requires": {"auth":{
