@@ -14,8 +14,8 @@
     "@sap/cds-dk": "^7"
   },
   "scripts": {
-    "start": "cds watch",
-    "deploy": "npm install && mbt build && cd mta_archives && cf deploy <%= projectName %>_1.0.0.mtar"
+    "start": "cds-serve",
+    "deploy": "npm install && mbt build && cd mta_archives"
   },
   "cds": {
     "requires": {"auth":{
