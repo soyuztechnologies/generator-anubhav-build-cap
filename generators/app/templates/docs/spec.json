@@ -1,13 +1,13 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Service for namespace catalogservice",
-    "description": "This service is located at [/api/v1/](/api/v1/)",
+    "title": "Use @title: '...' on your CDS service to provide a meaningful title.",
+    "description": "Use @Core.LongDescription: '...' on your CDS service to provide a meaningful description.",
     "version": ""
   },
   "x-sap-api-type": "ODATAV4",
   "x-odata-version": "4.01",
-  "x-sap-shortText": "Service for namespace catalogservice",
+  "x-sap-shortText": "Use @Core.Description: '...' on your CDS service to provide a meaningful short text.",
   "servers": [
     {
       "url": "/api/v1"
@@ -120,7 +120,12 @@
                   "responseArray": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/catalogservice.DataList"
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/catalogservice.DataList"
+                        }
+                      ],
+                      "nullable": true
                     }
                   },
                   "field": {
@@ -307,9 +312,13 @@
         "properties": {
           "responseArray": {
             "type": "array",
-            "required": true,
             "items": {
-              "$ref": "#/components/schemas/catalogservice.DataList"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/catalogservice.DataList"
+                }
+              ],
+              "nullable": true
             }
           }
         }
